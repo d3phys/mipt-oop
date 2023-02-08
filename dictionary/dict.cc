@@ -87,7 +87,7 @@ dict_find(dictionary* dict,
     while (slot->word->vptr->rank(word) != rank) {
         slot = slot->next;
         if (slot == nullptr)
-            break;
+            return nullptr;
     }
 
     return slot->word;
